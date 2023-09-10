@@ -71,15 +71,16 @@ variable "AWS_ACCESS_KEY_ID" {
 #   default = "t2.micro"
 # }
 
-# # variable "bucket" {
-# #   type = string
-# #   default="my-tf-test-bucketzzzzzzzzzzzzzzzzzzzzz"
-# # }
 
-# # resource "aws_s3_bucket" "example" {
-# #   bucket = var.bucket
-# #   tags = {
-# #     Name        = "My terraform bucket"
-# #     Environment = "Dev"
-# #   }
-# # }
+variable "bucket" {
+  type = string
+  default="my-tf-test-bucketzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
+}
+
+resource "aws_s3_bucket" "example" {
+  bucket = var.bucket
+  tags = {
+    Name        = "My terraform bucket"
+    Environment = "Dev"
+  }
+}
