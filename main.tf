@@ -74,7 +74,7 @@ variable "AWS_ACCESS_KEY_ID" {
 
 variable "bucket" {
   type = string
-  default="my-tf-test-bucket2111111111111111111111111111111111111111"
+  default="my-tf-test-bucket11111111112222221111"
 }
 
 resource "aws_s3_bucket" "example" {
